@@ -75,6 +75,11 @@ inputs:
     opts:
       title: "Keychain's password"
       is_required: true
+  - certificate_urls: $BITRISE_CERTIFICATE_URL
+    opts:
+      title: "Certificate URL"
+      is_sensitive: true
+      is_expand: true
   - example_step_input: Default Value - you can leave this empty if you want to
     opts:
       title: "Example Step Input"
@@ -85,7 +90,7 @@ inputs:
         Can be Markdown formatted text.
       is_expand: true
       is_required: true
-      value_options: []
+      value_options: [ "111" ]
 
 outputs:
   - EXAMPLE_STEP_OUTPUT:
