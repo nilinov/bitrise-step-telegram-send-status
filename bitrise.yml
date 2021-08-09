@@ -1,5 +1,5 @@
 format_version: 4
-default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+default_step_lib_source: https://gitlab.com/nic.ilinov/bitrise-step-telegram-send-status.git
 
 app:
   envs:
@@ -8,7 +8,7 @@ app:
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: telegram-send-status
   - BITRISE_STEP_VERSION: "0.0.1"
-  - BITRISE_STEP_GIT_CLONE_URL: https://github.com/n.ilinov@itmegastar.com/bitrise-step-telegram-send-status.git
+  - BITRISE_STEP_GIT_CLONE_URL: https://gitlab.com/nic.ilinov/bitrise-step-telegram-send-status.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
 
 workflows:

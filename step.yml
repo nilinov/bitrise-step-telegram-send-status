@@ -12,10 +12,11 @@ title: |-
 summary: |
   This step send to telegram status build. Send start and end build with custom message.
 description: |
-   This step send to telegram status build. Send start and end build with custom message. For send uses a telegram bot and channel.
-website: https://github.com/n.ilinov@itmegastar.com/bitrise-step-telegram-send-status
-source_code_url: https://github.com/n.ilinov@itmegastar.com/bitrise-step-telegram-send-status
-support_url: https://github.com/n.ilinov@itmegastar.com/bitrise-step-telegram-send-status/issues
+   This step send to telegram status build. Send start and end build with custom message.
+   Send uses a telegram bot and channel.
+website: https://gitlab.com/nic.ilinov/bitrise-step-telegram-send-status
+source_code_url: https://gitlab.com/nic.ilinov/bitrise-step-telegram-send-status
+support_url: https://gitlab.com/nic.ilinov/bitrise-step-telegram-send-status/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
@@ -45,7 +46,7 @@ type_tags:
   - notification
 
 is_requires_admin_user: true
-is_always_run: false
+is_always_run: true
 is_skippable: false
 run_if: ""
 
