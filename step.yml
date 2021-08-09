@@ -65,6 +65,16 @@ toolkit:
 
 
 inputs:
+  - install_defaults: "yes"
+    opts:
+      description: Installs default (Bitrise) Wildcard Provisioning Profile and
+        Certificate files for testing.
+      summary: Installs default (Bitrise) Wildcard code signing files.
+      title: Installs default code signing files
+  - keychain_password: $BITRISE_KEYCHAIN_PASSWORD
+    opts:
+      title: "Keychain's password"
+      is_required: true
   - example_step_input: Default Value - you can leave this empty if you want to
     opts:
       title: "Example Step Input"
