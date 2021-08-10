@@ -65,32 +65,36 @@ toolkit:
 
 
 inputs:
-  - install_defaults: "yes"
+  - telegram_bot_token: $TELEGRAM_BOT_TOKEN
     opts:
-      description: Installs default (Bitrise) Wildcard Provisioning Profile and
-        Certificate files for testing.
-      summary: Installs default (Bitrise) Wildcard code signing files.
-      title: Installs default code signing files
-  - keychain_password: $BITRISE_KEYCHAIN_PASSWORD
-    opts:
-      title: "Keychain's password"
-      is_required: true
-  - certificate_urls: $BITRISE_CERTIFICATE_URL
-    opts:
-      title: "Certificate URL"
+      title: "Telegram bot token"
+      summary: "For send message for channel or group telegram you must create telegram bot. After set this field telegram bot token."
       is_sensitive: true
       is_expand: true
-  - example_step_input: Default Value - you can leave this empty if you want to
+  - telegram_id_channel: $TELEGRAM_ID_CHANNEL
     opts:
-      title: "Example Step Input"
-      summary: Summary. No more than 2-3 sentences.
-      description: |
-        Description of this input.
-
-        Can be Markdown formatted text.
+      title: "Telegram channel id"
+      summary: "Paste in this field telegram channel or chat id."
+      is_sensitive: true
       is_expand: true
+  - type_notification:
+    opts:
+      title: "Type notification"
+      summary: "Select type notification: start build or end build. Also you can select custom event."
       is_required: true
-      value_options: [ "111" ]
+      value_options: [ "Start build", "End build", "Custom event" ]
+  - template_message_start:  "<b>App \"'$BITRISE_APP_TITLE'\"</b> \nWorkflow '$BITRISE_TRIGGERED_WORKFLOW_TITLE' \n\nBuild <b>#'$BITRISE_BUILD_NUMBER'</b> started"
+    opts:
+      title: "Template message start. You can use env variables and html tags in this field."
+      is_required: true
+  - template_message_end_success: "✅ <i>App \"'$BITRISE_APP_TITLE'\"</i> \n\nBuild <b>#'$BITRISE_BUILD_NUMBER'</b> success ended"
+    opts:
+      title: "Template message success end. You can use env variables and html tags in this field."
+      is_required: true
+  - template_message_end_success: "❌ <i>App \"'$BITRISE_APP_TITLE'\"</i>  \n\nBuild <b>#'$BITRISE_BUILD_NUMBER'</b> cancel error"
+    opts:
+      title: "Template message error end. You can use env variables and html tags in this field."
+      is_required: true
 
 outputs:
   - EXAMPLE_STEP_OUTPUT:
