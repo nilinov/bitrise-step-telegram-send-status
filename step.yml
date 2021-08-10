@@ -69,13 +69,13 @@ inputs:
     opts:
       title: "Telegram bot token"
       summary: "For send message for channel or group telegram you must create telegram bot. After set this field telegram bot token."
-#      is_sensitive: true
+      is_sensitive: true
       is_expand: true
   - telegram_id_channel: $TELEGRAM_ID_CHANNEL
     opts:
       title: "Telegram channel id"
       summary: "Paste in this field telegram channel or chat id."
-#      is_sensitive: true
+      is_sensitive: true
       is_expand: true
   - type_notification: "Start build"
     opts:
