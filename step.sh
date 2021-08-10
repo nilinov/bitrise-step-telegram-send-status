@@ -8,7 +8,12 @@ echo "${template_message_start}"
 
 curl --location --request POST 'https://api.telegram.org/'${telegram_bot_token}'/sendMessage' \
 --header 'Content-Type: application/json' \
---data-raw '{"chat_id": "'${telegram_id_channel}'", "text": $template_message_start, "disable_notification": false, "parse_mode": "HTML"}'
+--data-raw '{"chat_id": "'${telegram_id_channel}'", "text": ${template_message_start}, "disable_notification": false, "parse_mode": "HTML"}'
+
+curl --location --request POST 'postman-echo.com' \
+--header 'Content-Type: application/json' \
+--data-raw '{"chat_id": "'${telegram_id_channel}'", "text": ${template_message_start}, "disable_notification": false, "parse_mode": "HTML", "bot_id": ${telegram_bot_token}}'
+
 
 
 #echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
