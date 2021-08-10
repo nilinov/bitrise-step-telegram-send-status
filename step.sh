@@ -3,10 +3,14 @@ set -ex
 
 echo "Start send message"
 
+echo "\n\n\n\n\n"
+
 curl --location --request POST 'https://api.telegram.org/'$telegram_bot_token'/sendMessage' \
 --header 'Content-Type: application/json' \
---data-raw '{"chat_id": "'$telegram_id_channel'", "text": $template_message_start, "disable_notification": false, "parse_mode": "HTML"}'
+--data-raw '{"chat_id": "'$telegram_id_channel'", "text": "'$template_message_start'", "disable_notification": false, "parse_mode": "HTML"}'
+
+echo "\n\n\n\n\n"
 
 curl --location --request POST 'https://qut-mobile-app-default-rtdb.firebaseio.com/test.json' \
 --header 'Content-Type: text/plain' \
---data-raw '{"chat_id": "'$telegram_id_channel'", "text": $template_message_start, "disable_notification": false, "parse_mode": "HTML", "bot_id": "$telegram_bot_token"}'
+--data-raw '{"chat_id": "'$telegram_id_channel'", "text": "'$template_message_start'", "disable_notification": false, "parse_mode": "HTML", "bot_id": "'$telegram_bot_token'"}'
