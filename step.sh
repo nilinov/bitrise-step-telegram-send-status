@@ -3,10 +3,10 @@ set -ex
 
 echo "Start send message"
 
-echo "$TELEGRAM_ID_CHANNEL"
-echo "$template_message_start"
+echo "${telegram_bot_token}"
+echo "${template_message_start}"
 
-curl --location --request POST 'https://api.telegram.org/'$TELEGRAM_BOT_TOKEN'/sendMessage' \
+curl --location --request POST 'https://api.telegram.org/'${telegram_bot_token}'/sendMessage' \
 --header 'Content-Type: application/json' \
 --data-raw '{"chat_id": "'$TELEGRAM_ID_CHANNEL'", "text": $template_message_start, "disable_notification": false, "parse_mode": "HTML"}'
 
