@@ -47,7 +47,7 @@ type_tags:
 
 is_requires_admin_user: true
 is_always_run: true
-is_skippable: false
+is_skippable: true
 run_if: ""
 
 deps:
@@ -77,7 +77,7 @@ inputs:
       summary: "Paste in this field telegram channel or chat id."
       is_sensitive: true
       is_expand: true
-  - type_notification:
+  - type_notification: "Start build"
     opts:
       title: "Type notification"
       summary: "Select type notification: start build or end build. Also you can select custom event."
@@ -95,6 +95,10 @@ inputs:
     opts:
       title: "Template message error end. You can use env variables and html tags in this field."
       is_required: true
+  - template_message_custom: "<i>App \"'$BITRISE_APP_TITLE'\"</i>  \n\nBuild <b>#'$BITRISE_BUILD_NUMBER'</b> \n\nYour custom message"
+    opts:
+      title: "Template custom message. You can use env variables and html tags in this field."
+      is_required: false
 
 outputs:
   - EXAMPLE_STEP_OUTPUT:

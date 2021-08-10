@@ -1,7 +1,17 @@
 #!/bin/bash
 set -ex
 
-echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
+echo "Start send message"
+
+echo "$TELEGRAM_ID_CHANNEL"
+echo "$template_message_start"
+
+curl --location --request POST 'https://api.telegram.org/'$TELEGRAM_BOT_TOKEN'/sendMessage' \
+--header 'Content-Type: application/json' \
+--data-raw '{"chat_id": "'$TELEGRAM_ID_CHANNEL'", "text": $template_message_start, "disable_notification": false, "parse_mode": "HTML"}'
+
+
+#echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
 
 #
 # --- Export Environment Variables for other Steps:
