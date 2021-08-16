@@ -15,7 +15,7 @@ then
   fi
 fi
 
-if [[ $type_notification = "End build" ]]
+if [[ $type_notification = "Custom event" ]]
 then
     message=$template_message_custom;
 fi
