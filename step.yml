@@ -83,19 +83,19 @@ inputs:
       summary: "Select type notification: start build or end build. Also you can select custom event."
       is_required: true
       value_options: [ "Start build", "End build", "Custom event" ]
-  - template_message_start:  "<b>App \\"$BITRISE_APP_TITLE\\"</b> \nWorkflow $BITRISE_TRIGGERED_WORKFLOW_TITLE \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> started"
+  - template_message_start:  '<b>App \"$BITRISE_APP_TITLE\"</b> \nWorkflow $BITRISE_TRIGGERED_WORKFLOW_TITLE \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> started'
     opts:
       title: "Template message start. You can use env variables and html tags in this field."
       is_required: true
-  - template_message_end_success: "✅ <i>App \\"$BITRISE_APP_TITLE\\"</i> \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> success ended"
+  - template_message_end_success: '✅ <i>App \"$BITRISE_APP_TITLE\"</i> \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> success ended'
     opts:
       title: "Template message success end. You can use env variables and html tags in this field."
       is_required: true
-  - template_message_end_error: "❌ <i>App \\"$BITRISE_APP_TITLE\\"</i>  \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> cancel error"
+  - template_message_end_error: '❌ <i>App \"$BITRISE_APP_TITLE\"</i>  \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> cancel error'
     opts:
       title: "Template message error end. You can use env variables and html tags in this field."
       is_required: true
-  - template_message_custom: "<i>App \\"$BITRISE_APP_TITLE\\"</i>  \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> \n\nYour custom message"
+  - template_message_custom: '<i>App \"$BITRISE_APP_TITLE\"</i>  \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> \n\nYour custom message'
     opts:
       title: "Template custom message. You can use env variables and html tags in this field."
       is_required: false
