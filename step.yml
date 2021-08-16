@@ -91,7 +91,7 @@ inputs:
     opts:
       title: "Template message success end. You can use env variables and html tags in this field."
       is_required: true
-  - template_message_end_success: "❌ <i>App \"$BITRISE_APP_TITLE\"</i>  \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> cancel error"
+  - template_message_end_error: "❌ <i>App \"$BITRISE_APP_TITLE\"</i>  \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> cancel error"
     opts:
       title: "Template message error end. You can use env variables and html tags in this field."
       is_required: true
