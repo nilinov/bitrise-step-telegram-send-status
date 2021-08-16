@@ -83,7 +83,7 @@ inputs:
       summary: "Select type notification: start build or end build. Also you can select custom event."
       is_required: true
       value_options: [ "Start build", "End build", "Custom event" ]
-  - template_message_start:  "<b>App \"'$BITRISE_APP_TITLE'\"</b> \nWorkflow '$BITRISE_TRIGGERED_WORKFLOW_TITLE' \n\nBuild <b>#'$BITRISE_BUILD_NUMBER'</b> started"
+  - template_message_start:  "<b>App \"$BITRISE_APP_TITLE\"</b> \nWorkflow $BITRISE_TRIGGERED_WORKFLOW_TITLE \n\nBuild <b>#$BITRISE_BUILD_NUMBER</b> started"
     opts:
       title: "Template message start. You can use env variables and html tags in this field."
       is_required: true
